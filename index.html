@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascoteros!
+    </title>
+</head>
+
+<body>
+    <header>
+        <h1>FANATICOS DE ELLOS</h1>
+        <img src="./assets/huellas.png" alt="huellas">
+        <img src="./assets/huellas.png" alt="huellas">
+    </header>
+    <main>
+        <br>
+        <h2><u>Regístrate</u></h2>
+        <h3>Primero tus datos</h3>
+        <form action="/" method="POST">
+            <label> Nombre:
+                <input type="text" name="Nombre" id="nombre del dueño" placeholder="Juan" maxlength="15" minlength="2">
+            </label>
+            <label> Apellido:
+                <input type="text" name="Apellido" id="apellido del dueño" placeholder="Perez" maxlength="15"
+                    minlength="2">
+            </label>
+            <label> Email:
+                <input type="email" name="correo" id="contacto" placeholder="Alguien@mail.com" maxlength="30">
+            </label>
+            <br>
+            <br>
+            <label> Fecha de nacimiento:
+                <input type="date" name="date" id="cumple">
+            </label>
+            <label>
+                <input type="submit" name="enviar" value="Enviar">
+            </label>
+        </form>
+        <h3>Ahora los datos de la bendi</h3>
+        <form action="/" method="POST">
+            <label> Nombre:
+                <input type="text" name="Nombre" id="nombre de la mascota" value="Pancho" placeholder="Pancho"
+                    maxlength="15">
+            </label>
+            <label> Genero:
+                <input type="text" name="Genero" id="tipo de mascota" placeholder="Perro, Gato, Carpicho, etc"
+                    maxlength="15" minlength="2">
+            </label>
+            <label> Edad:
+                <input type="number" name="Peso" id="peso de mascota" placeholder="10" maxlength="3" disabled>
+            </label>
+            <p>Descripción:</p>
+            <label><textarea name="descripcion" id="descripcion" cols="30" rows="10"
+                    placeholder="Raza, edad, patologías previas, alergias, etc" maxlength="50"></textarea>
+            </label>
+            <img src="./assets/ovejero.jpg" alt="bendi">
+            <p>Foto cuerpo entero:</p>
+            <label>
+                <input type="file" name="foto bendi" id="foto mascota" accept="image/*">
+            </label>
+            <label>
+                <input type="submit" name="enviar" value="Enviar">
+            </label>
+        </form>
+        <br>
+        <br>
+        <h2><u>Si ya tienes cuenta</u></h2>
+        <form action="/" method="POST">
+            <label> Usuario:
+                <input type="text" name="usuario" id="usuario" placeholder="Juancho123" maxlength="15" min="5" required>
+            </label>
+            <label> Contraseña:
+                <input type="password" name="password" id="password" placeholder="panchitoteamo" required>
+            </label>
+        </form>
+        <br>
+        <br>
+        <h2><u>¿Que podemos hacer por ti?</u></h2>
+        <form action="/" method="POST">
+            <!--siempre conviene que el checkbox vaya dentro de un label asi el texto es cliqueable y no solo el cuadrito-->
+            <label>Veterinaria
+                <input type="checkbox" name="veterinaria" id="veterinaria" value="veterinaria">
+            </label>
+            <label>Peluquería
+                <input type="checkbox" name="peluqueria" id="peluqueria" value="peluqueria" checked>
+            </label>
+            <label>Guardería
+                <input type="checkbox" name="guarderia" id="guarderia" value="guarderia" disabled>
+            </label>
+        </form>
+        <br>
+        <br>
+        <h2><u>Selecciona la sucursal</u></h2>
+        <!--ojo! en los input radio siempre los name deben ser iguales, de lo contrario se seleccionan todos sin posibilidad de quitar selección-->
+        <!--ojo! el metodo get me envia todos los datos por la url, son visibles, incluso el password, todo se ve en la barra y queda expuesto; es decir no usar para formularios -datos semsibles-; si para una busqueda simple ya que es mas liviano-->
+        <form action="/" method="GET">
+            <label>
+                <input type="radio" name="sucursal" id="centro" value="1">Centro
+            </label>
+            <label>
+                <input type="radio" name="sucursal" id="nueva cordoba" value="2" checked>Nueva Córdoba
+            </label>
+            <label>
+                <input type="radio" name="sucursal" id="general paz" value="3">General Paz
+            </label>
+        </form>
+    </main>
+    <img src="./assets/animales.jpg" alt="bichos">
+    <img src="./assets/animales.jpg" alt="bichos">
+    <footer>
+        <form action="/" method="POST">
+            <label>Quienes somos:
+                <select name="institucional" id="institucional">
+                    <option value="institucional">Institucional</option>
+                    <option value="impositivas">Valuación Fiscal</option>
+                    <option value="nuestra historia">Historia</option>
+                    <option value="razon social">Razon Social</option>
+                    <option value="habilitaciones">Habilitaciones</option>
+                </select>
+            </label>
+            <label>Personal:
+                <select name="personal" id="personal">
+                    <option value="rrhh">Recursos Humanos</option>
+                    <option value="licencias">Licencias</option>
+                    <option value="profesionales">Profesionales</option>
+                    <option value="contrataciones">Envíanos tu CV</option>
+                </select>
+            </label>
+            <label>Contacto
+                <select name="contacto" id="contacto" multiple>
+                    <option value="correo">Correo</option>
+                    <option value="telefonos">Teléfonos</option>
+                    <option value="redes">Redes</option>
+                    <option value="postal">Postal</option>
+                </select>
+            </label>
+        </form>
+    </footer>
+</body>
+
+</html>
